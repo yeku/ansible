@@ -1,0 +1,7 @@
+- name: ensure old versions of docker are not installed
+  package:
+    name: '{{ item }}'
+    state: absent
+  with_items:
+    - docker
+    - docker-engine
